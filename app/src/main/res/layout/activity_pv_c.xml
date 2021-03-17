@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pvcBoard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00af91"
+    tools:context=".PvC">
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/dot_gothic"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cName" />
+
+    <TextView
+        android:id="@+id/cName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/dot_gothic"
+        android:text="Controller: X"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cName">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/row1c1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/box_bottom_right"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row1c2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/box_bottom"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row1c3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/box_bottom_left"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/row2c1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/box_right"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row2c2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row2c3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/box_left"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/row3c1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/box_top_right"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row3c2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/box_top"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/row3c3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/box_top_left"
+                android:fontFamily="@font/dot_gothic"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/dot_gothic"
+        android:text="Your turn"
+        android:textColor="#393737"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/table" />
+
+    <ImageView
+        android:id="@+id/winLine"
+        android:layout_width="5dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginLeft="175dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/table"
+        app:layout_constraintTop_toTopOf="@+id/table"
+        app:srcCompat="@drawable/win_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
