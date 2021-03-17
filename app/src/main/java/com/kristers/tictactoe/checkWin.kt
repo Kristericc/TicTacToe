@@ -1,5 +1,14 @@
 package com.kristers.tictactoe
 
+/**
+ * Checks if some one won the game.
+ * @param m: Game board 2d array (0 -  are empty fields)
+ *      If PvC:  1 = Controller
+ *              -1 = Player
+ *      If PvP:  1 = Player Nr2
+ *              -1 = Player (Games owner)
+ */
+
 fun checkWin(m: Array<Array<Int>>, isPlayersTurn: Boolean): Pair<Boolean, Pair<Int, Int>>{
     var isMatch: Boolean = true
     for (i in m.indices){

@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 
 /**
  * Player vs Controller activity
+ * @param m: Game board 2d array (0 -  are empty fields /  1 - are Controller fields / -1 - are Player fields)
  */
 
 

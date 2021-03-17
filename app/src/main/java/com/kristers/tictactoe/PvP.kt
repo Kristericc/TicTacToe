@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 
 /**
  * Player vs Player activity
+ * @param m: Game board 2d array (0 -  are empty fields /  1 - are Player Nr2 fields / -1 - are Player fields (Games owner))
  */
 
 class PvP : AppCompatActivity() {
