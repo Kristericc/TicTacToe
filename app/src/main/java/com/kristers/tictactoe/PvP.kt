@@ -46,6 +46,7 @@ class PvP : AppCompatActivity() {
     }
 
     //Sets View and adds OnClickListener to Table Layout row fields
+    @SuppressLint("SetTextI18n")
     fun setView() {
         setContentView(R.layout.activity_pv_p)
 
@@ -177,6 +178,7 @@ class PvP : AppCompatActivity() {
      * Shows win/lose or draw dialog
      * @param k: 0 - Controller won/ 1 - its draw/ 2 - Player won
      */
+    @SuppressLint("SetTextI18n")
     fun showDialog(k: Byte) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)

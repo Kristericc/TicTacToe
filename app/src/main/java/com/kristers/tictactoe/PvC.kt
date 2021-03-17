@@ -46,6 +46,7 @@ class PvC : AppCompatActivity() {
     }
 
     //Sets View and adds OnClickListener to Table Layout row fields
+    @SuppressLint("SetTextI18n")
     fun setView() {
         setContentView(R.layout.activity_pv_c)
 
@@ -178,7 +179,7 @@ class PvC : AppCompatActivity() {
             for (j in m[0].indices) {
                 if (tmpFieldArray[i][j] == 0) {
                     tmpFieldArray[i][j] = 1
-                    var check = checkWin(m, false)
+                    val check = checkWin(m, false)
                     if (check.first) {
                         showWinLine(check.second)
                         val row = tLayout.getChildAt(i) as TableRow
@@ -261,6 +262,7 @@ class PvC : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     fun controllerThinking() {
         isPlayerTurn = false
         val thoughtMoves = checkingMoves()
@@ -279,6 +281,7 @@ class PvC : AppCompatActivity() {
      * Shows win/lose or draw dialog
      * @param k: 0 - Controller won/ 1 - its draw/ 2 - Player won
      */
+    @SuppressLint("SetTextI18n")
     fun showDialog(k: Byte) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)

@@ -1,5 +1,6 @@
 package com.kristers.tictactoe
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var pvC: Button
     lateinit var iOpenBtn: ImageView
 
+    @SuppressLint("CommitPrefEdits", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferences = this.getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             setPlayersName()
         } else {
             pName = findViewById<TextView>(R.id.pName)
-            pName.text = "Hello, " + playerName
+            pName.text = "Hello, $playerName"
         }
 
         pvP = findViewById(R.id.pvpBtn)
@@ -105,6 +107,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //Sets player name
+    @SuppressLint("SetTextI18n")
     fun setPlayersName() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -117,7 +120,7 @@ class MainActivity : AppCompatActivity() {
             if (textView.text.length > 0) {
                 playerName = textView.text.toString()
                 pName = findViewById<TextView>(R.id.pName)
-                pName.text = "Hello, " + playerName
+                pName.text = "Hello, $playerName"
                 editor.putString("playerName", playerName)
                 editor.commit()
                 dialog.dismiss()
