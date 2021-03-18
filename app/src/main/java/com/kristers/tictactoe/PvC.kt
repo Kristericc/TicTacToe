@@ -109,17 +109,11 @@ class PvC : AppCompatActivity() {
                                 turn.text = "Controller`s turn"
                             }, 100);
                             delay(1500)
+                            controllerThinking()
                             if (!checkIfEmptySpots(m)) {
                                 Handler(Looper.getMainLooper()).postDelayed({
                                     showDialog(1.toByte())
-                                }, 100);
-                            } else {
-                                controllerThinking()
-                                if (!checkIfEmptySpots(m)) {
-                                    Handler(Looper.getMainLooper()).postDelayed({
-                                        showDialog(1.toByte())
-                                    }, 100)
-                                }
+                                }, 100)
                             }
                         }
                     }
@@ -264,17 +258,19 @@ class PvC : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     fun controllerThinking() {
-        isPlayerTurn = false
-        val thoughtMoves = checkingMoves()
-        isPlayerTurn = false
-        if (!thoughtMoves) {
-            randomMove()
-        }
-        Handler(Looper.getMainLooper()).postDelayed({
-            turn.text = "Your turn"
-        }, 100);
+        if(checkIfEmptySpots(m)) {
+            isPlayerTurn = false
+            val thoughtMoves = checkingMoves()
+            isPlayerTurn = false
+            if (!thoughtMoves) {
+                randomMove()
+            }
+            Handler(Looper.getMainLooper()).postDelayed({
+                turn.text = "Your turn"
+            }, 100);
 
-        isPlayerTurn = true
+            isPlayerTurn = true
+        }
     }
 
     /**
@@ -285,7 +281,6 @@ class PvC : AppCompatActivity() {
     fun showDialog(k: Byte) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
         dialog.setContentView(R.layout.win_dialog)
         val winText = dialog.findViewById<TextView>(R.id.winText)
 

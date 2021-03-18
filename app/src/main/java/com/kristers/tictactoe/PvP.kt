@@ -182,7 +182,6 @@ class PvP : AppCompatActivity() {
     fun showDialog(k: Byte) {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
         dialog.setContentView(R.layout.win_dialog)
         val winText = dialog.findViewById<TextView>(R.id.winText)
 

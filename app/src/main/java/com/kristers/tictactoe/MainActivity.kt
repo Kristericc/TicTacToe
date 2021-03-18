@@ -51,17 +51,20 @@ class MainActivity : AppCompatActivity() {
 
         //On click PvC activity is called. Passes player name
         pvC.setOnClickListener {
-            val intent = Intent(this@MainActivity, PvC::class.java).apply {
-                putExtra("pName", playerName)
+            if(playerName == null){
+                setPlayersName()
+            }else {
+                val intent = Intent(this@MainActivity, PvC::class.java).apply {
+                    putExtra("pName", playerName)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }
 
         //On click PvC activity is called. Asks for second Players name. Passes both names
         pvP.setOnClickListener {
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            dialog.setCancelable(false)
             dialog.setContentView(R.layout.player_name_input)
 
             val nameText = dialog.findViewById<TextView>(R.id.enterNameText)
@@ -89,7 +92,6 @@ class MainActivity : AppCompatActivity() {
         iOpenBtn.setOnClickListener {
             val dialog = Dialog(this)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-            dialog.setCancelable(false)
             dialog.setContentView(R.layout.info_dialog)
 
             val closeBtn = dialog.findViewById<Button>(R.id.closeBtn)
@@ -111,7 +113,6 @@ class MainActivity : AppCompatActivity() {
     fun setPlayersName() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
         dialog.setContentView(R.layout.player_name_input)
 
         val saveBtn = dialog.findViewById<Button>(R.id.saveBtn)
