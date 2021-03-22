@@ -302,5 +302,4 @@ class PvC : AppCompatActivity() {
         }
         dialog.show()
     }
-    //
 }
